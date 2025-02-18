@@ -1490,6 +1490,7 @@ GameObject:
   - component: {fileID: 829282834}
   - component: {fileID: 829282833}
   - component: {fileID: 829282832}
+  - component: {fileID: 829282835}
   m_Layer: 5
   m_Name: Restart-Button
   m_TagString: Untagged
@@ -1592,9 +1593,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 6b6475f5812b7c740b6b82e4b0f347cd, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: set_name
+      - m_Target: {fileID: 829282835}
+        m_TargetAssemblyTypeName: BNG.SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1612,6 +1613,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829282830}
   m_CullTransparentMesh: 0
+--- !u!114 &829282835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829282830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6475f5812b7c740b6b82e4b0f347cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadSceneMode: 0
+  UseScreenFader: 1
+  ScreenFadeTime: 0.5
 --- !u!1 &843195433 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d4f98431254002c48aed4634575bc8c6,
@@ -1846,13 +1862,13 @@ PrefabInstance:
     - target: {fileID: 848579965096908887, guid: e4819389334c4504290937beeb9cd43b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 848579965096908887, guid: e4819389334c4504290937beeb9cd43b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1223654765}
     - target: {fileID: 848579965096908887, guid: e4819389334c4504290937beeb9cd43b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -1866,17 +1882,17 @@ PrefabInstance:
     - target: {fileID: 848579965096908887, guid: e4819389334c4504290937beeb9cd43b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 848579965096908887, guid: e4819389334c4504290937beeb9cd43b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: L0_Lobby
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 848579965096908887, guid: e4819389334c4504290937beeb9cd43b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 848579965096910760, guid: e4819389334c4504290937beeb9cd43b,
         type: 3}
@@ -2091,7 +2107,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 829282831}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 848579965096910760, guid: e4819389334c4504290937beeb9cd43b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1223654766}
   m_SourcePrefab: {fileID: 100100000, guid: e4819389334c4504290937beeb9cd43b, type: 3}
 --- !u!224 &1223654764 stripped
 RectTransform:
@@ -2099,6 +2119,27 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1223654763}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1223654765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 848579965096910760, guid: e4819389334c4504290937beeb9cd43b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1223654763}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1223654766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223654765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6475f5812b7c740b6b82e4b0f347cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadSceneMode: 0
+  UseScreenFader: 1
+  ScreenFadeTime: 0.5
 --- !u!1 &1435783508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b75594f86962d8f40879abfcdb3044d5,
@@ -2806,12 +2847,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 848579965096908887, guid: e4819389334c4504290937beeb9cd43b,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 848579965096908887, guid: e4819389334c4504290937beeb9cd43b,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 605607764}
     - target: {fileID: 848579965096908887, guid: e4819389334c4504290937beeb9cd43b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 848579965096908887, guid: e4819389334c4504290937beeb9cd43b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 848579965096908887, guid: e4819389334c4504290937beeb9cd43b,
@@ -2827,7 +2878,7 @@ PrefabInstance:
     - target: {fileID: 848579965096908887, guid: e4819389334c4504290937beeb9cd43b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Step
+      value: L0_SelectChamber
       objectReference: {fileID: 0}
     - target: {fileID: 848579965096908887, guid: e4819389334c4504290937beeb9cd43b,
         type: 3}
@@ -3546,7 +3597,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 105f5d3148c33e940a0e19af6e13ffcf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 754bb42f269208248a5d07e15d1714e7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
